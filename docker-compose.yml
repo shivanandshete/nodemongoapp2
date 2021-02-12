@@ -50,6 +50,8 @@ services:
         - nodenw  
       links:
         - database
+      depends_on:
+        - database   
 volumes:
   nodevolume:         
 networks:
