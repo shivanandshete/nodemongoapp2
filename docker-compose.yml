@@ -10,7 +10,7 @@ services:
         DATABASE_NAME: realestate
         DATABASE_USERNAME: user
         DATABASE_PASSWORD: secretPassword
-#      MONGODB_URI: mongodb://user:secretPassword@database/realestate
+      MONGODB_URI: mongodb://user:secretPassword@database/realestate
       ports:
         - "8080:5000"
       networks:
@@ -31,6 +31,7 @@ services:
       volumes:
         - ./db-init.js:/docker-entrypoint-initdb.d/init.js:ro
         - nodevolume:/data/db
+      restart: always
    mongo-express:
       container_name: mongo-express
       image: mongo-express
