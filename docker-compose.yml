@@ -29,7 +29,7 @@ services:
       networks:
         - nodenw
       volumes:
-        - ./db-init.js:/docker-entrypoint-initdb.d
+        - ./db-init.js:/docker-entrypoint-initdb.d/init.js
         - ./dump/realestate:/dump/realestate-listing
         - ./server/data:/dump/scripts
         - nodevolume:/data/db
