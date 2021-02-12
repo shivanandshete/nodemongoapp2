@@ -5,11 +5,12 @@ services:
       container_name: frontend
       build: .
       environment:
-      - DATABASE_HOST=mongodb
+      - DATABASE_HOST=database
       - DATABASE_PORT=27017
       - DATABASE_NAME=realestate
       - DATABASE_USERNAME=user
       - DATABASE_PASSWORD=secretPassword
+#      MONGODB_URI: mongodb://user:secretPassword@database/realestate
       ports:
         - "8080:5000"
       networks:
@@ -17,7 +18,7 @@ services:
       links:
         - database
    database:
-      container_name: mongodb
+      container_name: database
       image: mongo
       environment:
         MONGO_INITDB_ROOT_USERNAME: root
