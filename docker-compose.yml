@@ -10,7 +10,7 @@ services:
         DATABASE_NAME: realestate
         DATABASE_USERNAME: user
         DATABASE_PASSWORD: secretPassword
-      MONGODB_URL: mongodb://user:secretPassword@database/realestate
+#      MONGODB_URL: mongodb://user:secretPassword@database/realestate
       ports:
         - "8080:5000"
       networks:
