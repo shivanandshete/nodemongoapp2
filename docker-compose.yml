@@ -15,8 +15,8 @@ services:
       networks:
         - nodenw
       links:
-        - mongo
-   mongodb:
+        - database
+   database:
       container_name: mongodb
       image: mongo
       environment:
@@ -41,7 +41,7 @@ services:
       networks:
         - nodenw  
       links:
-        - mongodb
+        - database
 volumes:
   nodevolume:         
 networks:
