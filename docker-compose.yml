@@ -40,6 +40,8 @@ services:
         ME_CONFIG_MONGODB_SERVER: database
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: example
+        ME_CONFIG_BASICAUTH_USERNAME: root
+        ME_CONFIG_BASICAUTH_PASSWORD: example
       networks:
         - nodenw  
       links:
