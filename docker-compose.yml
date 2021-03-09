@@ -3,7 +3,7 @@ version: '3'
 services:
    frontend:
       container_name: frontend
-      image: shivanandshete/frontend:43
+      image: shivanandshete/frontend:latest
       environment:
         DATABASE_HOST: database
         DATABASE_PORT: 27017
